@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "allowJs": true,
+        "target": "es2019",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "checkJs": false,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "inlineSourceMap": true,
+        "skipLibCheck": true,
+        "rootDirs": [
+            "coach",
+            "common",
+            "connector",
+            "dcs",
+            "dms",
+            "entry",
+            "host",
+            "message",
+            "notification",
+            "reminder",
+            "upload",
+        ],
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+    ]
+}

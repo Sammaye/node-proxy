@@ -1,0 +1,82 @@
+{
+    "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended", "prettier"],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "rules": {
+        "comma-dangle": 0,
+        "indent": ["error", 4, {"SwitchCase":  1}],
+        "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 6 }],
+        "operator-linebreak": ["error", "after", { "overrides": { ":": "before", "?": "before" } }],
+        "max-len": ["error", 150],
+        "quote-props": ["error", "consistent-as-needed"],
+        "curly": ["error", "all"],
+        "space-before-function-paren": ["error", {
+            "named": "never",
+            "anonymous": "always",
+            "asyncArrow": "always"
+        }],
+        "space-before-blocks": ["error", "always"],
+        "keyword-spacing": ["error", {"before":  true, "after":  true}],
+        "object-curly-spacing": ["error", "always", { "arraysInObjects":  false }],
+        "array-bracket-spacing": ["error", "never"],
+        "prefer-promise-reject-errors": ["error", { "allowEmptyReject": true }],
+        "class-methods-use-this": "warn",
+        // TODO make these error one day
+        "no-unused-vars": ["warn", { "args": "none" }],
+        "no-underscore-dangle":  ["warn", { "allow": ["_id"]}],
+        "eqeqeq": ["warn", "smart"],
+        "quotes": ["warn", "single"],
+        "consistent-return": "warn",
+        "strict": "warn",
+        "object-shorthand": "warn",
+        "prefer-const": "warn",
+        "spaced-comment": "warn",
+        "prefer-template": "warn",
+        "array-callback-return": "warn",
+        "import/first": "warn",
+        "no-new": "warn",
+        "semi": ["warn", "always"],
+        "dot-notation": "warn",
+        "no-useless-constructor": "warn",
+        "no-param-reassign": "warn",
+        "func-names": ["warn", "as-needed"],
+        "no-plusplus": "off",
+        "no-return-await": "off",
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "ForInStatement",
+                "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
+            },
+            {
+                "selector": "LabeledStatement",
+                "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
+            },
+            {
+                "selector": "WithStatement",
+                "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
+            },
+        ],
+
+        // Stuff that isn't important to remove
+        "camelcase": "off",
+        "no-await-in-loop": "off",
+        "no-console": "off",
+        "default-case": "off",
+        "radix": "off",
+        "import/prefer-default-export": "off"
+    },
+    "globals": {
+        "config": false
+    }
+}

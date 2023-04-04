@@ -1,0 +1,22 @@
+version: '3.5'
+name: "proxy"
+services:
+  proxy:
+    container_name: proxy
+    build:
+      context: .
+      target: dev
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules   #Dont sync with host (speed improvement)
+      - /usr/src/app/.git
+    networks:
+      - net-p-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+
+networks:
+  net-p:
+    name: net-p-proxy
+    driver: bridge
