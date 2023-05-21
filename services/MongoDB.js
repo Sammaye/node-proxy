@@ -1,3 +1,8 @@
+/**
+ * @file Proxy class for handle mongoDB functionality.
+ * @author Hasitha Gamage
+ */
+
 const _ = require('lodash');
 const mongoose = require('mongoose');
 

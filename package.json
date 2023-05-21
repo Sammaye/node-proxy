@@ -23,11 +23,13 @@
         "express": "^4.17.1",
         "express-boom-v2": "^4.2.2",
         "express-promise-router": "^4.1.1",
+        "helmet": "^6.0.1",
         "http-proxy-middleware": "^2.0.6",
         "lodash": "^4.17.21",
         "moment": "^2.29.4",
         "mongoose": "^5.12.14",
         "morgan": "^1.8.2",
+        "node-cache": "^5.1.2",
         "winston": "^3.2.1",
         "winston-cloudwatch": "3.0.1"
     },

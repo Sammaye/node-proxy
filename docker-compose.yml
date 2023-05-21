@@ -11,12 +11,12 @@ services:
       - /usr/src/app/node_modules   #Dont sync with host (speed improvement)
       - /usr/src/app/.git
     networks:
-      - net-p-proxy
+      - net-proxy
     ports:
       - "80:80"
       - "443:443"
 
 networks:
-  net-p:
-    name: net-p-proxy
+  net-proxy:
+    name: net-proxy
     driver: bridge

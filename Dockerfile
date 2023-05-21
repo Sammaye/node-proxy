@@ -1,4 +1,4 @@
-FROM node:gallium-alpine3.15 AS base
+FROM node:hydrogen-alpine3.15 AS base
 
 FROM base AS setup
 ENV LANG="C.UTF-8" \
